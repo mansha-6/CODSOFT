@@ -53,7 +53,6 @@ class Student {
         for (int i = 0; i < count; i++) {
             if (registeredCourses[i].code.equalsIgnoreCase(code)) {
                 registeredCourses[i].enrolled--;
-                // Shift courses left
                 for (int j = i; j < count - 1; j++) {
                     registeredCourses[j] = registeredCourses[j + 1];
                 }
@@ -104,7 +103,7 @@ public class task5 {
             System.out.print("Choose option: ");
 
             int option = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine(); 
 
             if (option == 1) {
                 System.out.println("Available courses:");

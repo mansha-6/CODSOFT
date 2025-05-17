@@ -39,7 +39,7 @@ class BankAccount {
 public class task3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        BankAccount myAccount = new BankAccount(500); // starting with $500
+        BankAccount myAccount = new BankAccount(500);
 
         while (true) {
             System.out.println("\nATM Menu:");

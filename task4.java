@@ -4,7 +4,7 @@ public class task4 {
     static class Question {
         String question;
         String[] options;
-        int correctOption; // index starting from 1
+        int correctOption; 
 
         Question(String question, String[] options, int correctOption) {
             this.question = question;
@@ -35,7 +35,7 @@ public class task4 {
         };
 
         int score = 0;
-        int timeLimitSeconds = 15; // seconds per question
+        int timeLimitSeconds = 15;
 
         System.out.println("Welcome to the Quiz Game!");
         System.out.println("You have " + timeLimitSeconds + " seconds to answer each question.");
@@ -51,7 +51,6 @@ public class task4 {
             long startTime = System.currentTimeMillis();
             int answer = -1;
 
-            // Read answer with time limit
             while ((System.currentTimeMillis() - startTime) / 1000 < timeLimitSeconds) {
                 System.out.print("Your answer (1-4): ");
                 if (scanner.hasNextInt()) {
@@ -63,11 +62,10 @@ public class task4 {
                     }
                 } else {
                     System.out.println("Invalid input. Please enter a number.");
-                    scanner.next(); // discard invalid input
+                    scanner.next(); 
                 }
             }
 
-            // Check if time expired before valid input
             if (answer == -1) {
                 System.out.println("\nTime's up! Moving to next question.\n");
             } else if (answer == q.correctOption) {
@@ -78,7 +76,6 @@ public class task4 {
             }
         }
 
-        // Result summary
         System.out.println("Quiz Over!");
         System.out.println("Your final score: " + score + " out of " + questions.length);
         System.out.println("Thank you for playing!");
