@@ -30,20 +30,14 @@ public class task2 {
                 }
             }
         }
-
-        // Calculate total marks
         int totalMarks = 0;
         for (int mark : marks) {
             totalMarks += mark;
         }
-
-        // Calculate average percentage
         double averagePercentage = (double) totalMarks / numberOfSubjects;
 
-        // Calculate grade based on average percentage
         String grade = calculateGrade(averagePercentage);
 
-        // Display results
         System.out.println("\n---------- RESULT ----------");
         System.out.println("Total Marks Obtained: " + totalMarks + " out of " + (numberOfSubjects * 100));
         System.out.printf("Average Percentage: %.2f%%\n", averagePercentage);
@@ -52,8 +46,6 @@ public class task2 {
 
         scanner.close();
     }
-
-    // Method to calculate grade based on average percentage
     private static String calculateGrade(double average) {
         if (average >= 90) {
             return "A+";
