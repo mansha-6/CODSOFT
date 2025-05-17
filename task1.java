@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class task1 {
 
-    // ANSI escape codes for colored output
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BG_BLUE = "\u001B[44m";
     public static final String ANSI_BG_GREEN = "\u001B[42m";
@@ -25,7 +24,7 @@ public class task1 {
 
         while (playAgain) {
             roundsPlayed++;
-            int numberToGuess = random.nextInt(100) + 1; // 1 to 100
+            int numberToGuess = random.nextInt(100) + 1; 
             int maxAttempts = 7;
             int attempts = 0;
             boolean guessedCorrectly = false;
