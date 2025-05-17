@@ -12,10 +12,8 @@ public class task2 {
         System.out.print("Enter the number of subjects: ");
         int numberOfSubjects = scanner.nextInt();
 
-        // Array to store marks for each subject
         int[] marks = new int[numberOfSubjects];
 
-        // Input marks for each subject
         for (int i = 0; i < numberOfSubjects; i++) {
             int mark;
             while (true) {
